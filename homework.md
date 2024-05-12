@@ -20,4 +20,29 @@ db. image=mysql:8. Контейнер должен работать в bridge-с
 
 <img width="340" alt="image" src="https://github.com/Franky12111990/shvirtd-example-python/assets/121640886/bd00ea32-2035-4bb7-81b2-d4548e89ccc1">
 
+Задача 4
+Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
+Подключитесь к Вм по ssh и установите docker.
+Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
+Зайдите на сайт проверки http подключений, например(или аналогичный): https://check-host.net/check-http и запустите проверку вашего сервиса http://<внешний_IP-адрес_вашей_ВМ>:8090. Таким образом трафик будет направлен в ingress-proxy.
+(Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения docker ps -a
+В качестве ответа повторите sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
+
+Решение:
+<img width="568" alt="image" src="https://github.com/Franky12111990/shvirtd-example-python/assets/121640886/31669d62-b9d2-48a5-b583-a2bb76a56fb7">
+
+
+Задача 6
+Скачайте docker образ hashicorp/terraform:latest и скопируйте бинарный файл /bin/terraform на свою локальную машину, используя dive и docker save. Предоставьте скриншоты действий .
+
+Решение:
+
+<img width="545" alt="image" src="https://github.com/Franky12111990/shvirtd-example-python/assets/121640886/e9eaabe1-4dc4-4dee-b09c-dbd76824f66c">
+
+
+Задача 6.1
+Добейтесь аналогичного результата, используя docker cp.
+Предоставьте скриншоты действий .
+Решение:
+<img width="536" alt="image" src="https://github.com/Franky12111990/shvirtd-example-python/assets/121640886/cb08d57f-de62-40d5-9d9c-47e8b42eed64">
 
