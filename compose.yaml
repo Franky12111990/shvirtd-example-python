@@ -39,19 +39,18 @@ services:
       context: .
       dockerfile: Dockerfile.python
     command: /app/wait-for-it.sh
+    restart: always
     depends_on:
       - db
-    networks:
-      - backend
-    restart: always
     environment:
       MYSQL_HOST: ${MYSQL_HOST}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "5000:5000"
- 
+    networks:
+      backend:
+        ipv4_address: 172.20.0.5
+
 networks:
   backend:
     driver: bridge
