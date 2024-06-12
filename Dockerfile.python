@@ -1,6 +1,9 @@
 FROM python:3.9-slim
+RUN python -m venv venv
 WORKDIR /app
-COPY requirements.txt .
+COPY . /app
+COPY wait-for-it.sh /app/wait-for-it.sh
+RUN chmod +x /app/wait-for-it.sh
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+RUN python -m pip install mysql-connector-python
 CMD ["python", "main.py"]

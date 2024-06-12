@@ -1,0 +1,7 @@
+{
+"log-driver": "local",
+  "registry-mirrors": [
+     "https://dockerhub1.beget.com"
+   ]
+}
+
